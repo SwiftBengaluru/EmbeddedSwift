@@ -1,0 +1,125 @@
+# Action Required: Prepare Your Mac for the Embedded Swift Workshop
+
+Hello everyone! 👋
+
+We're excited to welcome you to the **SwiftBengaluru – Embedded Swift Hands-on Workshop** on **Saturday, 24 October 2026, from 9:30 AM to 1:00 PM**.
+
+This is a hands-on workshop where you'll write Swift code and run it on a **Raspberry Pi Pico 2 W**.
+
+We'll provide the hardware kits, with two participants sharing each kit.
+
+**Please complete the following setup on your Mac before attending.**
+
+### 1. Hardware requirements
+
+- Apple Silicon MacBook (M1, M2, M3, M4, M5, or newer)
+- macOS with a compatible Xcode version
+- At least 10 GB of free disk space recommended
+- Administrator access to install developer tools
+- Fully charged MacBook and charger
+
+### 2. Install Xcode and Command Line Tools
+
+Install Xcode from the Mac App Store.
+
+Open Terminal and run:
+
+```bash
+xcode-select --install
+```
+
+Verify:
+
+```bash
+xcodebuild -version
+clang --version
+```
+
+### 3. Install Homebrew
+
+If you don't already have Homebrew, follow the installation instructions:
+
+https://brew.sh/
+
+Verify:
+
+```bash
+brew --version
+```
+
+### 4. Install CMake, Ninja and Git
+
+Run:
+
+```bash
+brew install cmake ninja git
+```
+
+Verify:
+
+```bash
+cmake --version
+ninja --version
+git --version
+```
+
+### 5. Install Swift 6.4
+
+Download and install the Swift 6.4 release toolchain for macOS from:
+
+https://www.swift.org/install/
+
+Make sure you select the Apple Silicon-compatible toolchain.
+
+Verify the installed toolchain using its full path:
+
+```bash
+/Library/Developer/Toolchains/swift-6.4-RELEASE.xctoolchain/usr/bin/swiftc --version
+```
+
+If your installation uses a different toolchain name or location, adjust the path accordingly.
+
+### 6. Install ARM GNU Toolchain
+
+Download the macOS Apple Silicon version of the Arm GNU Toolchain for `arm-none-eabi`:
+
+https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
+
+Our tested setup uses Arm GNU Toolchain 15.3.
+
+Verify after installation:
+
+```bash
+arm-none-eabi-gcc --version
+```
+
+If the command is not found, the toolchain's `bin` directory needs to be added to your `PATH`.
+
+### 7. Verify your setup
+
+Open Terminal and run:
+
+```bash
+swiftc --version
+cmake --version
+ninja --version
+arm-none-eabi-gcc --version
+git --version
+```
+
+Note: `swiftc --version` may show your default Xcode Swift version rather than Swift 6.4. The workshop project will use the installed Swift 6.4 toolchain explicitly.
+
+### 8. Important reminders
+
+- Please complete the installation **before 24 October**.
+- Bring your MacBook and charger.
+- Bring a USB-C to Micro-USB **data cable** if you have one. We'll also arrange cables for the shared hardware kits.
+- We will share the workshop starter project and final verification instructions separately.
+- If you face installation issues, please reach out before the workshop.
+
+**The goal is simple: arrive with your Mac ready so we can spend our time building real embedded projects using Swift!**
+
+See you at the workshop!
+
+**Team SwiftBengaluru**  
+https://swiftbengaluru.org/
